@@ -34,13 +34,17 @@
     String author = request.getParameter("author");
     String message = request.getParameter("message");
 
-    if (author.isEmpty() || message.isEmpty()) {
+    if (author == null || message == null) {
         out.print("Brak autora lub wiadomości!");
     } else {
         MyTweet myTweet = new MyTweet(author, message, System.currentTimeMillis());
         tweetsList.add(myTweet);
     }
-    for (tweetsList tweet : tweetsList)
+    for (MyTweet tweet : tweetsList) {
+        out.print("Tweet Author: " + tweet.getAuthor() + "<br>");
+        out.print("Tweet Message: " + tweet.getTweet() + "<br>");
+        out.print("Tweet Date: " + tweet.getTimestamps() + "<br>");
+    }
 
 %>
 
