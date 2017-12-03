@@ -3,5 +3,15 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+
+  <servlet>
+    <servlet-name>firstServlet</servlet-name>
+    <servlet-class>com.sda.servlets.FirstServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>firstServlet</servlet-name>
+    <url-pattern>/marcin/</url-pattern>
+  </servlet-mapping>
+
 </web-app>
