@@ -3,7 +3,18 @@
 
 <html>
 <!-- add tweet -->
+
+<head>
+    <title>SDA PUBLISH</title>
+</head>
 <body>
+
+<%
+    String error = request.getParameter("error");
+    if (error != null && "".equals(error)) {
+        out.print("No user or message input! Please enter fields correctly.");
+    }
+%>
 
 <form action="/publish" method="post">
     <fieldset>
@@ -12,7 +23,7 @@
             <li>Message: <textarea name="message" type="text"
                                    style="width:300px; height:50px; margin-left:30px"></textarea></li>
         </ul>
-        <input type="submit" name="Submit" value="Submit" method="post">
+        <input type="submit" name="Submit" value="Publish" method="post">
     </fieldset>
 </form>
 

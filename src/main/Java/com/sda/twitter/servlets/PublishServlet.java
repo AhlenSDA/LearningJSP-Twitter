@@ -22,10 +22,11 @@ public class PublishServlet extends HttpServlet {
         String message = (String) req.getParameter("message");
 
         if ((Strings.isNullOrEmpty(author) || Strings.isNullOrEmpty(message))) {
-            resp.getWriter().print("Brak autora lub wiadomości! <br>");
+            resp.sendRedirect("/publish.jsp?error");
         } else {
             MyTweet myTweet = new MyTweet(author, message, System.currentTimeMillis());
             service.addTweet(myTweet);
+            resp.sendRedirect("/index.jsp");
         }
     }
 }

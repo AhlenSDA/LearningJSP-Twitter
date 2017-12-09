@@ -5,7 +5,14 @@
 
 <html>
 <!-- list tweets -->
+<head>
+    <title>SDA INDEX</title>
+</head>
 <body>
+
+<p>
+    <a href="publish.jsp">Publish tweet</a>
+</p>
 
 <%!
     MyTwitterService service = MyTwitterService.getInstance();
