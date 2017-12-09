@@ -9,7 +9,6 @@
 
 <%!
     MyTwitterService service = MyTwitterService.getInstance();
-
 %>
 
 <%

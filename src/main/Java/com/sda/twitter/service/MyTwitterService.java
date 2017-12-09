@@ -9,7 +9,6 @@ import java.util.List;
 public class MyTwitterService {
 
     private static MyTwitterService _instance;
-
     private List<MyTweet> myTweetList;
 
     // It s a good practise to initialize variables in constructor
@@ -33,5 +32,4 @@ public class MyTwitterService {
         // we secure list from being modified by others by creating unmodifiableList
         return Collections.unmodifiableList(myTweetList);
     }
-
 }
