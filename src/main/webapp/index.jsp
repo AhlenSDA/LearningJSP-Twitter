@@ -18,13 +18,31 @@
     MyTwitterService service = MyTwitterService.getInstance();
 %>
 
-<%
-    for (MyTweet tweet : service.getMyTweetList()) {
-        out.print("<br> Tweet Author: " + tweet.getAuthor() + "<br>");
-        out.print("Tweet Message: " + tweet.getTweet() + "<br>");
-        out.print("Tweet Date: " + tweet.getTimestamps() + "<br>");
-    }
-%>
+<table border="2" >
+    <tr>
+        <td width="100px">Author</td>
+        <td width="300px">Date</td>
+        <td width="400px">Message</td>
+    </tr>
+    <%
+        for (MyTweet tweet : service.getMyTweetList()) {
+            out.print("</tr>");
+            out.print("<td>" + tweet.getAuthor() + "</td>");
+            out.print("<td>" + tweet.getTimestamps() + "</td>");
+            out.print("<td>" + tweet.getTweet() + "</td>");
+            out.print("</tr>");
+        }
+    %>
+
+</table>
+
+<%--<%--%>
+<%--for (MyTweet tweet : service.getMyTweetList()) {--%>
+<%--out.print("<br> Tweet Author: " + tweet.getAuthor() + "<br>");--%>
+<%--out.print("Tweet Message: " + tweet.getTweet() + "<br>");--%>
+<%--out.print("Tweet Date: " + tweet.getTimestamps() + "<br>");--%>
+<%--}--%>
+<%--%>--%>
 
 </body>
 </html>
