@@ -16,9 +16,12 @@
 
 <%!
     MyTwitterService service = MyTwitterService.getInstance();
+
+
+
 %>
 
-<table border="2" >
+<table border="2">
     <tr>
         <td width="100px">Author</td>
         <td width="300px">Date</td>
