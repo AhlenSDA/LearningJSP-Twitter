@@ -16,9 +16,6 @@
 
 <%!
     MyTwitterService service = MyTwitterService.getInstance();
-
-
-
 %>
 
 <table border="2">
@@ -38,14 +35,6 @@
     %>
 
 </table>
-
-<%--<%--%>
-<%--for (MyTweet tweet : service.getMyTweetList()) {--%>
-<%--out.print("<br> Tweet Author: " + tweet.getAuthor() + "<br>");--%>
-<%--out.print("Tweet Message: " + tweet.getTweet() + "<br>");--%>
-<%--out.print("Tweet Date: " + tweet.getTimestamps() + "<br>");--%>
-<%--}--%>
-<%--%>--%>
 
 </body>
 </html>

@@ -4,7 +4,6 @@
 
 <html>
 <!-- add tweet -->
-
 <head>
     <title>SDA PUBLISH</title>
 </head>
@@ -22,15 +21,16 @@
             author = cookie.getValue();
         }
     }
-
 %>
 
 <form action="/publish" method="post">
     <fieldset>
         <ul>
-            <li>Author: <input name="author" type="text" value="<%= author %>" style="width:300px; height:50px; margin-left:30px"/>
+            <li>Author: <input name="author" type="text" value="<%= author %>"
+                               style="width:300px; height:50px; margin-left:30px"/>
             </li>
-            <li>Message: <textarea name="message" type="text" style="width:300px; height:50px; margin-left:30px"></textarea></li>
+            <li>Message: <textarea name="message" type="text"
+                                   style="width:300px; height:50px; margin-left:30px"></textarea></li>
         </ul>
         <input type="submit" name="Submit" value="Publish" method="post">
     </fieldset>
